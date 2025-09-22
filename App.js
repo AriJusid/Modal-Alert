@@ -43,10 +43,10 @@ export default function App() {
     </View>
   </Modal>
 
-  <Pressable
-          style={[styles.button, styles.buttonOpen]}
+        <Pressable
+          style={styles.buttonTextWrapper}
           onPress={() => setModalVisible(true)}>
-          <Text style={styles.textStyle}>Show Modal</Text>
+          <Text style={styles.buttonText}>Show Modal</Text>
         </Pressable>
 
     <TouchableOpacity onPress={showAlert} style={[styles.buttonContainer, , { transform: [{ scale }] }]}>
@@ -55,9 +55,7 @@ export default function App() {
             <Text style={styles.buttonText}>Show alert</Text>
           </View>
     </TouchableOpacity>
-    <Animated.View style={styles.container}>
       <StatusBar style="auto" />
-    </Animated.View>
     </SafeAreaView>
     </SafeAreaProvider>
     </>
@@ -84,8 +82,6 @@ const styles = StyleSheet.create({
     minWidth: 140,
     padding: 3,
     height: '35%',
-    borderRadius: '50%',
-
 
   },
   buttonTextWrapper: {
@@ -93,8 +89,8 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     paddingHorizontal: 24,
     borderRadius: 6,
-    width: '100%',
-    height: '50%',
+    width: '60%',
+    height: '30%',
   },
   buttonText: {
     color: '#ffffff',
